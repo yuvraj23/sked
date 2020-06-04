@@ -1,0 +1,70 @@
+{%extends 'EventApp/index.html'%}
+{%load static%}
+{%block menu%}
+
+<h2 class="w3-center">Manual Slideshow</h2>
+
+<div class="w3-content w3-display-container ">
+  <div class="card mySlides" style="width: 80%;  position: relative;
+  top: 10rem;
+  right: 10px;
+  left:4rem;">
+    <img src="{%static 'image/dp.jpg' %}" alt="poorchild" class="img-thumbnail" width="350px" height="80px">
+    <div class="card-body">
+      <h5 class="card-title">Name : Yuvraj S Singh</h5>
+      <p class="card-text"><b>Role :FrontEnd And BackEnd Developer</b></p>
+    </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">Qualification: Pursuing BE IN CSE</li>
+      <li class="list-group-item">Talk with me on: yuv@gmail.com</li>
+      <li class="list-group-item" style="color:red;">Aim To Create Sked :To Bring Smile On The Face Of Children Who Can't FulFill Thier Dream </li>
+    </ul>
+
+  </div>
+
+
+
+  <div class="card mySlides" style="width: 100%; position: relative;
+  top: 10rem;
+  right: 10px;
+  left: 4rem;">
+    <img src="{%static 'image/NIT.jpg' %}" alt="poorchild" class="img-thumbnail" width="350px" height="200px">
+    <div class="card-body"><br><br><br><br><br><br>
+      <h5 class="card-title">Name : Nitesh M Sharma</h5><br><br><br><br><br><br><br>
+      <p class="card-text"><b>Role :Manage Database</b></p>
+    </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">Qualification: Pursuing BE IN CSE</li>
+      <li class="list-group-item">Talk with me on: nit@gmail.com</li>
+      <li class="list-group-item" style="color:red;">Aim To Create Sked :To Bring Smile On The Face Of Children Who Can't FulFill Thier Dream </li>
+    </ul>
+
+  </div>
+
+
+  <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+  <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>
+</div>
+
+<script>
+var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  if (n > x.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = x.length}
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+  x[slideIndex-1].style.display = "block";
+}
+</script>
+
+
+{%endblock%}

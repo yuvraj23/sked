@@ -1,0 +1,21 @@
+{%extends 'EventApp/index.html'%}
+{%load static%}
+{% load crispy_forms_tags %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+
+{%block menu%}
+
+<div class="jumbotron"  style="  position: relative;
+top: 6rem; align:center "  >
+<h1>Plz Enter Child Detail</h1>
+
+  <form class=""  style="  position: relative;
+  top: 2rem;" method="post">
+    {{form.as_p}}
+    {%csrf_token%}"
+      <button class="btn btn-success btn-lg" >submit</button>
+  </form>
+
+</div>
+
+{%endblock%}
